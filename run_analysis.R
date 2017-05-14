@@ -31,7 +31,5 @@ create_aggregate_data <- function(){
     
     new_dat <- dat[, grep(c("[Mm][Ee][Aa][Nn]|[Ss][Tt][Dd]|Activity|Subject"), names(dat))]
     aggregate_dat <- aggregate(new_dat, by=c(new_dat["Activity"], new_dat["Subject"]), FUN = mean)
-    print(aggregate_dat)
-    
-    return()
+    return(aggregate_dat)
 }
